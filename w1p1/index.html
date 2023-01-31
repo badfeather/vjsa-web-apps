@@ -10,6 +10,7 @@
 	<link rel="apple-touch-icon" href="/icon.png">
 	<link rel="stylesheet" href="/style.css">
 	<link rel="stylesheet" href="/w1p1/project.css">
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism.css" rel="stylesheet" />
 </head>
 
 <body>
@@ -26,8 +27,16 @@
 		<footer>
 			<p><em>Photos by Jack Sparrow. All rights reserved.</em></p>
 		</footer>
+
+		<hr>
+		<h2>Project JS</h2>
+		<pre><code id="view-js" class="hljs language-javascript"></code></pre>
 	</div>
 	<script src="/scripts.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/components/prism-core.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/plugins/autoloader/prism-autoloader.min.js"></script>
+	<script src="/view-js.js"></script>
 	<script src="/w1p1/project.js"></script>
+	<script>viewJS('/w1p1/project.js');</script>
 </body>
 </html>

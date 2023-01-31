@@ -1,22 +1,7 @@
-let endpoint = 'https://vanillajsacademy.com/api/photos.json',
-	app = document.getElementById('app');
+let app = document.getElementById('app');
 
-console.log('here');
-
-/**
- * Sanitize and encode all HTML in a user-submitted string
- * https://portswigger.net/web-security/cross-site-scripting/preventing
- * @param  {String} str  The user-submitted string
- * @return {String} str  The sanitized string
- */
-var sanitizeHTML = function (str) {
-	return str.replace(/[^\w. ]/gi, function (c) {
-		return '&#' + c.charCodeAt(0) + ';';
-	});
-};
-
-function fetchPhotos (endpoint) {
-	fetch(endpoint).then(function(response) {
+function fetchPhotos () {
+	fetch('https://vanillajsacademy.com/api/photos.json').then(function(response) {
 		if (response.ok) {
 			return response.json();
 		}
@@ -26,7 +11,6 @@ function fetchPhotos (endpoint) {
 
 	.catch(function(error) {
 		console.log(error);
-		renderError();
 	});
 }
 
@@ -35,11 +19,6 @@ function renderPhotos (data) {
 	let html = '<div id="photos" class="photos">';
 	console.log(data);
 	for (let p of data) {
-		// let id = sanitizeHTML(p.id),
-		// 	url = sanitizeHTML(p.url),
-		// 	name = sanitizeHTML(p.name),
-		// 	desc = sanitizeHTML(p.description),
-		// 	price = sanitizeHTML(p.price);
 		let id = p.id,
 		url = p.url,
 		name = p.name,
@@ -60,8 +39,4 @@ function renderPhotos (data) {
 	app.innerHTML = html;
 }
 
-function renderError() {
-	app.innerHTML = 'No photos for you!';
-}
-
-fetchPhotos(endpoint);
+fetchPhotos();
