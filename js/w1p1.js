@@ -26,10 +26,9 @@ function renderPhotos (data) {
 		price = p.price;
 		html += `
 <figure class="photo" id="${id}">
-	<img src="${url}" />
+	<img src="${url}" alt="${desc}" />
 	<figcaption class="photo-caption">
 		<div class="photo-title">${name}</div>
-		<div class="photo-description">${desc}</div>
 		<div class="photo-price">$${price}</div>
 	</figcaption>
 </figure>
