@@ -1,0 +1,342 @@
+:root {
+	--color: #202020;
+	--color-link: #5072A7;
+	--color-link--hover: #3457D5;
+	--color-border: #ddd;
+	--select-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3e%3cpath fill='%232e2e2e' d='M16.594 8.578L18 9.984l-6 6-6-6 1.406-1.406L12 13.172z'/%3e%3c/svg%3e");
+}
+
+body {
+	font-size: 100%;
+}
+
+.site {
+	margin: 0 auto;
+	width: 100%;
+	padding: 2em 1em;
+	max-width: 60em;
+	font-family: sans-serif;
+	line-height: 1.5;
+}
+
+img {
+	height: auto;
+	max-width: 100%;
+}
+
+p,
+ul,
+ol,
+form,
+blockquote,
+article,
+.article,
+.article-content,
+.row,
+table,
+details,
+figure {
+	margin: 0 0 1.5rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin: 0 0 .75rem;
+	font-weight: 700;
+}
+
+h1 {
+	font-size: 2rem;
+}
+
+h2 {
+	font-size: 1.75rem;
+}
+
+h3 {
+	font-size: 1.5rem;
+}
+
+h4 {
+	font-size: 1.25rem;
+}
+
+h5 {
+	font-size: 1.125rem;
+}
+
+h6 {
+	font-size: 1rem;
+}
+
+hr {
+	border-color: var(--color-border);
+	margin: 3rem 0;
+}
+
+ul ul,
+ul ol,
+ol ol,
+ol ul {
+	margin-bottom: 0;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea,
+label,
+legend {
+	margin: 0;
+	font-family: inherit;
+	font-size: inherit;
+	line-height: inherit;
+}
+
+button,
+input {
+	overflow: visible;
+}
+
+button,
+select {
+	text-transform: none;
+}
+
+[role=button] {
+  cursor: pointer;
+}
+
+select {
+	word-wrap: normal;
+	appearance: none;
+
+	&:disabled {
+		opacity: 1;
+	}
+}
+
+select:disabled {
+	opacity: 1;
+}
+
+option {
+	color: var(--color);
+}
+
+button,
+input[type=submit],
+input[type=button],
+input[type=reset],
+a[role=button] {
+  font-family: inherit;
+  padding: 0.5em 1.125em;
+  color: #000;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: middle;
+  display: inline-block;
+  margin-bottom: 0;
+  background-color: var(--color-link);
+  border: 1px solid var(--color-link);
+  border-radius: 0.25em;
+  white-space: nowrap;
+  outline: none;
+  transition: all 0.15s ease-out;
+  box-shadow: none;
+}
+
+button:not(:disabled),
+input[type=submit]:not(:disabled),
+input[type=button]:not(:disabled),
+input[type=reset]:not(:disabled),
+a[role=button]:not(:disabled) {
+  cursor: pointer;
+}
+
+button:hover,
+button:focus,
+input[type=submit]:hover,
+input[type=submit]:focus,
+input[type=button]:hover,
+input[type=button]:focus,
+input[type=reset]:hover,
+input[type=reset]:focus,
+a[role=button]:hover,
+a[role=button]:focus {
+  color: #fff;
+  text-decoration: none;
+  background-color: var(--color-link--hover);
+  border-color: var(--color-link--hover);
+}
+
+button:focus,
+input[type=submit]:focus,
+input[type=button]:focus,
+input[type=reset]:focus,
+a[role=button]:focus {
+  box-shadow: 0 0 0 4px #cbd6ee;
+}
+
+button.disabled,
+button:disabled,
+input[type=submit].disabled,
+input[type=submit]:disabled,
+input[type=button].disabled,
+input[type=button]:disabled,
+input[type=reset].disabled,
+input[type=reset]:disabled,
+a[role=button].disabled,
+a[role=button]:disabled {
+  cursor: not-allowed;
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+textarea,
+input[type=text],
+input[type=password],
+input[type=datetime],
+input[type=datetime-local],
+input[type=date],
+input[type=time],
+input[type=week],
+input[type=month],
+input[type=number],
+input[type=email],
+input[type=url],
+input[type=search],
+input[type=tel],
+input[type=color],
+select,
+optgroup {
+  font-family: inherit;
+  display: block;
+  width: 100%;
+  padding: 0.5em 0.75em;
+  margin: 0;
+  color: var(--color);
+  border: 1px solid var(--color-border);
+  border-radius: 0.25em;
+  outline: none;
+  background-color: #fff;
+  box-shadow: none;
+}
+
+textarea:focus,
+input[type=text]:focus,
+input[type=password]:focus,
+input[type=datetime]:focus,
+input[type=datetime-local]:focus,
+input[type=date]:focus,
+input[type=time]:focus,
+input[type=week]:focus,
+input[type=month]:focus,
+input[type=number]:focus,
+input[type=email]:focus,
+input[type=url]:focus,
+input[type=search]:focus,
+input[type=tel]:focus,
+input[type=color]:focus,
+select:focus,
+optgroup:focus {
+  background-color: #fff;
+  border-color: var(--color-border);
+  box-shadow: 0 0 0 4px #cbd6ee;
+}
+
+textarea::-ms-expand,
+input[type=text]::-ms-expand,
+input[type=password]::-ms-expand,
+input[type=datetime]::-ms-expand,
+input[type=datetime-local]::-ms-expand,
+input[type=date]::-ms-expand,
+input[type=time]::-ms-expand,
+input[type=week]::-ms-expand,
+input[type=month]::-ms-expand,
+input[type=number]::-ms-expand,
+input[type=email]::-ms-expand,
+input[type=url]::-ms-expand,
+input[type=search]::-ms-expand,
+input[type=tel]::-ms-expand,
+input[type=color]::-ms-expand,
+select::-ms-expand,
+optgroup::-ms-expand {
+  background-color: transparent;
+  border: 0;
+}
+
+textarea::placeholder,
+input[type=text]::placeholder,
+input[type=password]::placeholder,
+input[type=datetime]::placeholder,
+input[type=datetime-local]::placeholder,
+input[type=date]::placeholder,
+input[type=time]::placeholder,
+input[type=week]::placeholder,
+input[type=month]::placeholder,
+input[type=number]::placeholder,
+input[type=email]::placeholder,
+input[type=url]::placeholder,
+input[type=search]::placeholder,
+input[type=tel]::placeholder,
+input[type=color]::placeholder,
+select::placeholder,
+optgroup::placeholder {
+  opacity: 1;
+  color: var(--color-border);
+}
+
+textarea.invalid,
+textarea:invalid,
+input[type=text].invalid,
+input[type=text]:invalid,
+input[type=password].invalid,
+input[type=password]:invalid,
+input[type=datetime].invalid,
+input[type=datetime]:invalid,
+input[type=datetime-local].invalid,
+input[type=datetime-local]:invalid,
+input[type=date].invalid,
+input[type=date]:invalid,
+input[type=time].invalid,
+input[type=time]:invalid,
+input[type=week].invalid,
+input[type=week]:invalid,
+input[type=month].invalid,
+input[type=month]:invalid,
+input[type=number].invalid,
+input[type=number]:invalid,
+input[type=email].invalid,
+input[type=email]:invalid,
+input[type=url].invalid,
+input[type=url]:invalid,
+input[type=search].invalid,
+input[type=search]:invalid,
+input[type=tel].invalid,
+input[type=tel]:invalid,
+input[type=color].invalid,
+input[type=color]:invalid,
+select.invalid,
+select:invalid,
+optgroup.invalid,
+optgroup:invalid {
+  border-color: red;
+}
+
+select {
+  padding-right: 1.5em;
+  background-image: var(--select-icon);
+  background-repeat: no-repeat;
+  background-position: right 0.375em top 50%;
+  background-size: 1em auto;
+}
+
+input[type=search] {
+  box-sizing: border-box;
+}

@@ -1,0 +1,19 @@
+{
+  "name": "vjsa-web-apps",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/badfeather/vjsa-web-apps.git"
+  },
+  "author": "brad@badfeather.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/badfeather/vjsa-web-apps/issues"
+  },
+  "homepage": "https://github.com/badfeather/vjsa-web-apps#readme"
+}
